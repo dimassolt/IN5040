@@ -1,0 +1,7 @@
+select 
+first(timestamp) as Start_date, 
+last(timestamp) as End_date, 
+avg(averageWindSpeed) as Wind,
+sum(precipitation) as Prec 
+from san_francisco #length(3)
+having sum(precipitation) > 0 and avg(averageWindSpeed) > 19
