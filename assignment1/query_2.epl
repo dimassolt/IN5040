@@ -1,1 +1,13 @@
+// select 
+// first(timestamp) as Start_date, 
+// last(timestamp) as End_date, 
+// avg(averageTemperature) as Temp 
+// from jfk #length(7)
+// having avg(averageTemperature) > 82
 
+select 
+first(timestamp) as Start_date, 
+last(timestamp) as End_date, 
+avg(averageTemperature) as Temp 
+from jfk #length_batch(7)
+having avg(averageTemperature) > 82

@@ -1,0 +1,6 @@
+select 
+first(timestamp) as Week_start, 
+last(timestamp) as Week_end, 
+sum(precipitation) as Prec 
+from san_francisco #ext_timed_batch(timestamp, 7 days)
+having sum(precipitation) >= 3
